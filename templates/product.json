@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -110,9 +119,9 @@
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "image": "{{ product.metafields.custom.image_for_image_text_section_1.value }}",
+        "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
-        "reveal_on_scroll": true,
         "remove_vertical_spacing": false
       }
     },
@@ -216,13 +225,29 @@
             "question": "{{ product.metafields.custom.faq_q4.value }}",
             "answer": "<p>{{ product.metafields.custom.faq_a4.value }}</p>"
           }
+        },
+        "question_yLUTEV": {
+          "type": "question",
+          "settings": {
+            "question": "Question",
+            "answer": "<p>Write a clear and concise answer to guide your customers.</p>"
+          }
+        },
+        "question_dbXDxq": {
+          "type": "question",
+          "settings": {
+            "question": "Question",
+            "answer": "<p>Write a clear and concise answer to guide your customers.</p>"
+          }
         }
       },
       "block_order": [
         "q1",
         "q2",
         "q3",
-        "q4"
+        "q4",
+        "question_yLUTEV",
+        "question_dbXDxq"
       ],
       "settings": {
         "color_scheme": "scheme-1",
