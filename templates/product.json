@@ -193,28 +193,28 @@
           "type": "question",
           "settings": {
             "question": "{{ product.metafields.custom.faq_q1.value }}",
-            "answer": "<p>{{ product.metafields.custom.faq_a1 | metafield_tag }}</p>"
+            "answer": "<p>{{ product.metafields.custom.faq_a1.value }}</p>"
           }
         },
         "q2": {
           "type": "question",
           "settings": {
             "question": "{{ product.metafields.custom.faq_q2.value }}",
-            "answer": "<p>{{ product.metafields.custom.faq_a2 | metafield_tag }}</p>"
+            "answer": "<p>{{ product.metafields.custom.faq_a2.value }}</p>"
           }
         },
         "q3": {
           "type": "question",
           "settings": {
             "question": "{{ product.metafields.custom.faq_q3.value }}",
-            "answer": "<p>{{ product.metafields.custom.faq_a3 | metafield_tag }}</p>"
+            "answer": "<p>{{ product.metafields.custom.faq_a3.value }}</p>"
           }
         },
         "q4": {
           "type": "question",
           "settings": {
             "question": "{{ product.metafields.custom.faq_q4.value }}",
-            "answer": "<p>{{ product.metafields.custom.faq_a4 | metafield_tag }}</p>"
+            "answer": "<p>{{ product.metafields.custom.faq_a4.value }}</p>"
           }
         }
       },
