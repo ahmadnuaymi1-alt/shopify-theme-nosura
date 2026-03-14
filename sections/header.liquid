@@ -79,7 +79,9 @@
           {{- section.settings.transparent_logo | image_url: width: section.settings.transparent_logo.width | image_tag: sizes: sizes, widths: widths, class: 'header__logo-image header__logo-image--transparent' -}}
         {%- endif -%}
       {%- else -%}
-        <span class="header__logo-text h5">{{ shop.name }}</span>
+        <span class="sr-only">{{ shop.name }}</span>
+        <img src="{{ 'nosura-logo.png' | asset_url }}" alt="{{ shop.name }}" class="header__logo-image" width="235" height="63" style="max-width: {{ section.settings.logo_max_width }}px">
+        <img src="{{ 'nosura-logo-white.png' | asset_url }}" alt="{{ shop.name }}" class="header__logo-image header__logo-image--transparent" width="235" height="63" style="max-width: {{ section.settings.logo_max_width }}px">
       {%- endif -%}
     {%- endcapture -%}
 
