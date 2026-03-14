@@ -1,0 +1,240 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-1": {
+          "type": "image",
+          "settings": {
+            "subheading": "Welcome to Nosura",
+            "title": "One store. Everything you need.",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "Shop Now",
+            "button_1_link": "/collections/all",
+            "button_1_style": "solid",
+            "text_color": "#ffffff",
+            "gradient_overlay": "linear-gradient(180deg, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.7) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "slide-1"
+      ],
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": true,
+        "media_size": "md",
+        "show_initial_transition": true,
+        "autoplay": false,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#0A0A0A",
+        "controls_color": "#ffffff"
+      }
+    },
+    "trust-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "icon-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "icon_width": 24,
+            "mobile_icon_width": 24,
+            "title": "Fast Shipping",
+            "content": "<p>Free delivery on orders over $50</p>"
+          }
+        },
+        "icon-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-shield",
+            "icon_width": 24,
+            "mobile_icon_width": 24,
+            "title": "Secure Payments",
+            "content": "<p>Your information is always protected</p>"
+          }
+        },
+        "icon-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-return",
+            "icon_width": 24,
+            "mobile_icon_width": 24,
+            "title": "Easy Returns",
+            "content": "<p>30-day hassle-free return policy</p>"
+          }
+        },
+        "icon-4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "icon_width": 24,
+            "mobile_icon_width": 24,
+            "title": "24/7 Support",
+            "content": "<p>We're here to help anytime</p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon-1",
+        "icon-2",
+        "icon-3",
+        "icon-4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "stack_on_mobile": false,
+        "text_alignment": "center"
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "products_count": 8,
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection-1"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "hide_product_information": false,
+        "stack_products": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "Featured Collection",
+        "title": "",
+        "content": ""
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "text": "About Nosura"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Quality products, curated for you",
+            "heading_tag": "h2"
+          }
+        },
+        "paragraph": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>We believe everyone deserves access to great products without the premium price tag. From everyday essentials to unique finds, Nosura is your one-stop destination for quality goods shipped directly to your door.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "Learn More",
+            "url": "/pages/about"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "paragraph",
+        "button"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "image_position": "start",
+        "reveal_on_scroll": true
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>Standard shipping takes 7-15 business days depending on your location. We process all orders within 1-3 business days. Tracking information is sent to your email as soon as your order ships.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "What is your return policy?",
+            "answer": "<p>We offer a 30-day return policy on all items. If you're not completely satisfied, contact our support team and we'll arrange a return or exchange. Items must be unused and in original packaging.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "How can I track my order?",
+            "answer": "<p>Once your order ships, you'll receive an email with a tracking number. You can also check your order status anytime by visiting the Order Tracking page or logging into your account.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "<p>Yes, we ship worldwide. Shipping costs and delivery times vary by destination. All applicable customs duties and taxes are the responsibility of the customer.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "How do I contact customer support?",
+            "answer": "<p>You can reach us through our Contact page, or email us directly. Our support team is available 24/7 and typically responds within 24 hours.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "show_categories": false,
+        "subheading": "Got questions?",
+        "title": "Frequently Asked Questions"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": false,
+        "subheading": "Stay in the loop",
+        "title": "Join our newsletter",
+        "content": "<p>Be the first to know about new arrivals, exclusive deals, and special offers.</p>",
+        "button_text": "Subscribe"
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "trust-icons",
+    "featured-collections",
+    "image-with-text",
+    "faq",
+    "newsletter"
+  ]
+}
