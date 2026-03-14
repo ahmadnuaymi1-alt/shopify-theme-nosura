@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "Footer group",
@@ -56,6 +65,8 @@
         "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "stack_on_mobile": false,
+        "icon_color": "",
+        "text_color": "",
         "text_alignment": "center"
       }
     },
@@ -73,25 +84,25 @@
         "links_1": {
           "type": "links",
           "settings": {
-            "menu": "footer",
+            "menu": "policies",
             "show_menu_title": true,
-            "menu_title": "Shop"
+            "menu_title": ""
           }
         },
         "links_2": {
           "type": "links",
           "settings": {
-            "menu": "",
+            "menu": "info",
             "show_menu_title": true,
-            "menu_title": "Support"
+            "menu_title": ""
           }
         },
-        "links_3": {
-          "type": "links",
+        "text_AkhQzj": {
+          "type": "text",
           "settings": {
-            "menu": "",
-            "show_menu_title": true,
-            "menu_title": "Legal"
+            "title": "About our store",
+            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
+            "enable_follow_on_shop": true
           }
         }
       },
@@ -99,7 +110,7 @@
         "text_block",
         "links_1",
         "links_2",
-        "links_3"
+        "text_AkhQzj"
       ],
       "settings": {
         "color_scheme": "scheme-1",
