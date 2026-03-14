@@ -73,11 +73,11 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "about_block": {
+        "contact_block": {
           "type": "text",
           "settings": {
-            "title": "About Nosura",
-            "content": "<p>Your one-stop shop for quality products at great prices. From everyday essentials to unique finds, we deliver straight to your door.</p><p><a href=\"/pages/about\">Learn more about us \u2192</a></p>",
+            "title": "About",
+            "content": "<p><strong>Store Name: </strong>Nosura<strong><br/>Address: </strong><a href=\"https://www.google.com/search?q=60%20Cumberland%20St%2C%20Springfield%2C%20Massachusetts%2C%2001107%2C%20United%20States\" target=\"_blank\" title=\"60 Cumberland St, Springfield, Massachusetts, 01107, United States\">60 Cumberland St, Springfield, Massachusetts, 01107, United States</a><strong><br/>Email: </strong><a href=\"mailto:info@nosura.com\" title=\"info@nosura.com\">info@nosura.com</a><strong><br/>Number: </strong><a href=\"tel:+14132884149\" title=\"+1 (413) 288-4149\">+1 (413) 288-4149</a><strong><br/>Hours of Operation:</strong> Monday to Friday, 9:00 AM to 5:00 PM (EST)<br/><br/>We try our best to get back to inquiries within 1 to 2 business days.<br/><br/></p>",
             "enable_follow_on_shop": false
           }
         },
@@ -97,20 +97,20 @@
             "menu_title": ""
           }
         },
-        "contact_block": {
+        "about_block": {
           "type": "text",
           "settings": {
-            "title": "Get in Touch",
-            "content": "<p>60 Cumberland St<br>Springfield, MA 01107</p><p>info@nosura.com<br>+1 (413) 288-4149</p><p>Mon \u2013 Fri, 9 AM \u2013 5 PM EST</p>",
+            "title": "About Nosura",
+            "content": "<p>Your one-stop shop for quality products at great prices. From everyday essentials to unique finds, we deliver straight to your door.</p>",
             "enable_follow_on_shop": false
           }
         }
       },
       "block_order": [
-        "about_block",
+        "contact_block",
         "links_shop",
         "links_service",
-        "contact_block"
+        "about_block"
       ],
       "settings": {
         "color_scheme": "scheme-1",
