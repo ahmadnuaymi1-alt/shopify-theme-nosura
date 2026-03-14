@@ -243,20 +243,6 @@
         "title": "Frequently Asked Questions",
         "content": ""
       }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "separate_section_with_border": false,
-        "image_size": "auto",
-        "subheading": "Stay in the loop",
-        "title": "Join our newsletter",
-        "content": "<p>Be the first to know about new arrivals, exclusive deals, and special offers.</p>",
-        "button_text": "Subscribe",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
-      }
     }
   },
   "order": [
@@ -264,7 +250,6 @@
     "trust-icons",
     "featured-collections",
     "image-with-text",
-    "faq",
-    "newsletter"
+    "faq"
   ]
 }
