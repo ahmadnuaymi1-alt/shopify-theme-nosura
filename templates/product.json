@@ -84,10 +84,160 @@
         "title": "You may also like",
         "content": ""
       }
+    },
+    "product-image-text": {
+      "type": "product-image-with-text",
+      "blocks": {
+        "iwt-heading": {
+          "type": "heading",
+          "settings": {
+            "text": "{{ product.metafields.custom.image_with_text_header.value }}",
+            "heading_tag": "h2"
+          }
+        },
+        "iwt-richtext": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>{{ product.metafields.custom.image_with_text_body | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "iwt-heading",
+        "iwt-richtext"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "image": "{{ product.metafields.custom.image_for_image_text_section_1.value }}",
+        "image_position": "start",
+        "content_width": "sm",
+        "reveal_on_scroll": true,
+        "remove_vertical_spacing": false
+      }
+    },
+    "product-features": {
+      "type": "product-features",
+      "blocks": {
+        "feature-1": {
+          "type": "feature",
+          "settings": {
+            "icon": "picto-shield",
+            "title": "{{ product.metafields.custom.feature_1_header.value }}",
+            "text": "{{ product.metafields.custom.feature_1_body.value }}"
+          }
+        },
+        "feature-2": {
+          "type": "feature",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "title": "{{ product.metafields.custom.feature_2_header.value }}",
+            "text": "{{ product.metafields.custom.feature_2_body.value }}"
+          }
+        },
+        "feature-3": {
+          "type": "feature",
+          "settings": {
+            "icon": "picto-return",
+            "title": "{{ product.metafields.custom.feature_3_header.value }}",
+            "text": "{{ product.metafields.custom.feature_3_body.value }}"
+          }
+        },
+        "feature-4": {
+          "type": "feature",
+          "settings": {
+            "icon": "picto-customer-support",
+            "title": "{{ product.metafields.custom.feature_4_header.value }}",
+            "text": "{{ product.metafields.custom.feature_4_body.value }}"
+          }
+        },
+        "feature-5": {
+          "type": "feature",
+          "settings": {
+            "icon": "picto-lock",
+            "title": "{{ product.metafields.custom.feature_5_header.value }}",
+            "text": "{{ product.metafields.custom.feature_5_body.value }}"
+          }
+        },
+        "feature-6": {
+          "type": "feature",
+          "settings": {
+            "icon": "picto-star",
+            "title": "{{ product.metafields.custom.feature_6_header.value }}",
+            "text": "{{ product.metafields.custom.feature_6_body.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "feature-1",
+        "feature-2",
+        "feature-3",
+        "feature-4",
+        "feature-5",
+        "feature-6"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "heading": "Why choose us",
+        "image_aspect_ratio": "portrait",
+        "image_border_radius": 0,
+        "icon_size": 32,
+        "mobile_hide_text": true
+      }
+    },
+    "product-faq": {
+      "type": "product-faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "{{ product.metafields.custom.faq_q1.value }}",
+            "answer": "<p>{{ product.metafields.custom.faq_a1 | metafield_tag }}</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "{{ product.metafields.custom.faq_q2.value }}",
+            "answer": "<p>{{ product.metafields.custom.faq_a2 | metafield_tag }}</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "{{ product.metafields.custom.faq_q3.value }}",
+            "answer": "<p>{{ product.metafields.custom.faq_a3 | metafield_tag }}</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "{{ product.metafields.custom.faq_q4.value }}",
+            "answer": "<p>{{ product.metafields.custom.faq_a4 | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
+        "subheading": "Got questions?",
+        "title": "Frequently Asked Questions",
+        "open_first_row": false
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "product-image-text",
+    "product-features",
+    "product-faq"
   ]
 }

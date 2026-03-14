@@ -1,0 +1,352 @@
+{%- if section.blocks.size > 0 -%}
+  <style>
+    #shopify-section-{{ section.id }} {
+      --features-icon-size: {{ section.settings.icon_size }}px;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__image {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__image img {
+      width: 100%;
+      height: auto;
+      border-radius: {{ section.settings.image_border_radius }}px;
+      object-fit: cover;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__image--portrait img {
+      aspect-ratio: 3 / 4;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__image--square img {
+      aspect-ratio: 1 / 1;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__image--landscape img {
+      aspect-ratio: 4 / 3;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__column {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.75rem;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__icon {
+      width: var(--features-icon-size);
+      height: var(--features-icon-size);
+      flex-shrink: 0;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__title {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    #shopify-section-{{ section.id }} .product-features__text {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      opacity: 0.75;
+      margin: 0;
+    }
+
+    @media screen and (min-width: 700px) {
+      #shopify-section-{{ section.id }} .product-features__grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+      }
+
+      #shopify-section-{{ section.id }} .product-features__image {
+        order: 2;
+      }
+
+      #shopify-section-{{ section.id }} .product-features__left {
+        order: 1;
+      }
+
+      #shopify-section-{{ section.id }} .product-features__right {
+        order: 3;
+      }
+    }
+
+    @media screen and (max-width: 699px) {
+      #shopify-section-{{ section.id }} .product-features__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      #shopify-section-{{ section.id }} .product-features__image {
+        grid-column: 1 / -1;
+        order: -1;
+      }
+
+      #shopify-section-{{ section.id }} .product-features__left,
+      #shopify-section-{{ section.id }} .product-features__right {
+        display: contents;
+      }
+
+      #shopify-section-{{ section.id }} .product-features__item {
+        gap: 0.5rem;
+      }
+
+      {%- if section.settings.mobile_hide_text -%}
+        #shopify-section-{{ section.id }} .product-features__text {
+          display: none;
+        }
+      {%- endif -%}
+    }
+  </style>
+
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+    <div class="container">
+      <div class="section-stack">
+        {%- render 'section-header', heading: section.settings.heading -%}
+
+        <div class="product-features__grid">
+          {%- comment -%}Left column: features 1-3{%- endcomment -%}
+          <div class="product-features__column product-features__left">
+            {%- for block in section.blocks -%}
+              {%- if forloop.index <= 3 -%}
+                <div class="product-features__item" {{ block.shopify_attributes }}>
+                  {%- if block.settings.custom_icon != blank -%}
+                    <div class="product-features__icon">
+                      {{- block.settings.custom_icon | image_url: width: 128 | image_tag: loading: 'lazy' -}}
+                    </div>
+                  {%- elsif block.settings.icon != 'none' -%}
+                    <div class="product-features__icon">
+                      {%- render 'icon' with block.settings.icon, width: section.settings.icon_size -%}
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.title != blank -%}
+                    <p class="product-features__title">{{ block.settings.title }}</p>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <p class="product-features__text">{{ block.settings.text }}</p>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+
+          {%- comment -%}Center image{%- endcomment -%}
+          <div class="product-features__image product-features__image--{{ section.settings.image_aspect_ratio }}">
+            {%- if section.settings.image != blank -%}
+              {%- assign sizes = '(max-width: 699px) 100vw, 33vw' -%}
+              {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200', loading: 'lazy' -}}
+            {%- else -%}
+              {{- 'product-1' | placeholder_svg_tag: 'placeholder' -}}
+            {%- endif -%}
+          </div>
+
+          {%- comment -%}Right column: features 4-6{%- endcomment -%}
+          <div class="product-features__column product-features__right">
+            {%- for block in section.blocks -%}
+              {%- if forloop.index > 3 -%}
+                <div class="product-features__item" {{ block.shopify_attributes }}>
+                  {%- if block.settings.custom_icon != blank -%}
+                    <div class="product-features__icon">
+                      {{- block.settings.custom_icon | image_url: width: 128 | image_tag: loading: 'lazy' -}}
+                    </div>
+                  {%- elsif block.settings.icon != 'none' -%}
+                    <div class="product-features__icon">
+                      {%- render 'icon' with block.settings.icon, width: section.settings.icon_size -%}
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.title != blank -%}
+                    <p class="product-features__title">{{ block.settings.title }}</p>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <p class="product-features__text">{{ block.settings.text }}</p>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Product features",
+  "class": "shopify-section--product-features",
+  "tag": "section",
+  "max_blocks": 6,
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "t:global.section.separate_section_with_border",
+      "default": false
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why choose us"
+    },
+    {
+      "type": "header",
+      "content": "Center image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:global.image.image"
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        { "value": "portrait", "label": "Portrait (3:4)" },
+        { "value": "square", "label": "Square (1:1)" },
+        { "value": "landscape", "label": "Landscape (4:3)" },
+        { "value": "original", "label": "Original" }
+      ],
+      "default": "portrait"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Features"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 24,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 32
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_hide_text",
+      "label": "Hide description text on mobile",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "picto-award-gift", "label": "Award/Gift", "group": "Shop" },
+            { "value": "picto-bag-handle", "label": "Bag", "group": "Shop" },
+            { "value": "picto-coupon", "label": "Coupon", "group": "Shop" },
+            { "value": "picto-gift", "label": "Gift", "group": "Shop" },
+            { "value": "picto-love", "label": "Love", "group": "Shop" },
+            { "value": "picto-percent", "label": "Percent", "group": "Shop" },
+            { "value": "picto-star", "label": "Star", "group": "Shop" },
+            { "value": "picto-box", "label": "Box", "group": "Shipping" },
+            { "value": "picto-delivery-truck", "label": "Delivery truck", "group": "Shipping" },
+            { "value": "picto-pin", "label": "Pin", "group": "Shipping" },
+            { "value": "picto-plane", "label": "Plane", "group": "Shipping" },
+            { "value": "picto-return", "label": "Return", "group": "Shipping" },
+            { "value": "picto-credit-card", "label": "Credit card", "group": "Security" },
+            { "value": "picto-lock", "label": "Lock", "group": "Security" },
+            { "value": "picto-shield", "label": "Shield", "group": "Security" },
+            { "value": "picto-money", "label": "Money", "group": "Security" },
+            { "value": "picto-earth", "label": "Earth", "group": "Ecology" },
+            { "value": "picto-leaf", "label": "Leaf", "group": "Ecology" },
+            { "value": "picto-recycle", "label": "Recycle", "group": "Ecology" },
+            { "value": "picto-customer-support", "label": "Customer support", "group": "Communication" },
+            { "value": "picto-chat", "label": "Chat", "group": "Communication" },
+            { "value": "picto-happy-face", "label": "Happy face", "group": "Communication" },
+            { "value": "picto-phone", "label": "Phone", "group": "Communication" },
+            { "value": "picto-send", "label": "Send", "group": "Communication" },
+            { "value": "picto-timer", "label": "Timer", "group": "Other" },
+            { "value": "picto-target", "label": "Target", "group": "Other" },
+            { "value": "picto-success", "label": "Success", "group": "Other" }
+          ],
+          "default": "picto-star"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom icon image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product features",
+      "category": "t:global.categories.trust_social",
+      "blocks": [
+        { "type": "feature", "settings": { "icon": "picto-shield", "title": "Feature one", "text": "Description of this feature" } },
+        { "type": "feature", "settings": { "icon": "picto-delivery-truck", "title": "Feature two", "text": "Description of this feature" } },
+        { "type": "feature", "settings": { "icon": "picto-return", "title": "Feature three", "text": "Description of this feature" } },
+        { "type": "feature", "settings": { "icon": "picto-customer-support", "title": "Feature four", "text": "Description of this feature" } },
+        { "type": "feature", "settings": { "icon": "picto-lock", "title": "Feature five", "text": "Description of this feature" } },
+        { "type": "feature", "settings": { "icon": "picto-star", "title": "Feature six", "text": "Description of this feature" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
