@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow": {
@@ -14,8 +23,18 @@
             "button_1_text": "Shop Now",
             "button_1_link": "/collections/all",
             "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
             "text_color": "#ffffff",
-            "gradient_overlay": "linear-gradient(180deg, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.7) 100%)"
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.7) 100%)"
           }
         }
       },
@@ -30,7 +49,7 @@
         "autoplay": false,
         "autoplay_pause_on_video": true,
         "cycle_speed": 5,
-        "background": "#0A0A0A",
+        "background": "#0a0a0a",
         "controls_color": "#ffffff"
       }
     },
@@ -88,6 +107,8 @@
         "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "stack_on_mobile": false,
+        "icon_color": "",
+        "text_color": "",
         "text_alignment": "center"
       }
     },
@@ -97,7 +118,10 @@
         "collection-1": {
           "type": "collection",
           "settings": {
+            "collection": "",
             "products_count": 8,
+            "title": "",
+            "link_url": "",
             "link_text": "View all"
           }
         }
@@ -114,9 +138,7 @@
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": "Featured Collection",
-        "title": "",
-        "content": ""
+        "subheading": "Featured Collection"
       }
     },
     "image-with-text": {
@@ -146,7 +168,9 @@
           "settings": {
             "style": "solid",
             "text": "Learn More",
-            "url": "/pages/about"
+            "url": "/pages/about",
+            "background": "",
+            "text_color": ""
           }
         }
       },
@@ -159,8 +183,10 @@
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
+        "reveal_on_scroll": true,
         "image_position": "start",
-        "reveal_on_scroll": true
+        "content_width": "sm",
+        "remove_vertical_spacing": true
       }
     },
     "faq": {
@@ -214,7 +240,8 @@
         "separate_section_with_border": true,
         "show_categories": false,
         "subheading": "Got questions?",
-        "title": "Frequently Asked Questions"
+        "title": "Frequently Asked Questions",
+        "content": ""
       }
     },
     "newsletter": {
@@ -222,10 +249,13 @@
       "settings": {
         "color_scheme": "scheme-3",
         "separate_section_with_border": false,
+        "image_size": "auto",
         "subheading": "Stay in the loop",
         "title": "Join our newsletter",
         "content": "<p>Be the first to know about new arrivals, exclusive deals, and special offers.</p>",
-        "button_text": "Subscribe"
+        "button_text": "Subscribe",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
       }
     }
   },
