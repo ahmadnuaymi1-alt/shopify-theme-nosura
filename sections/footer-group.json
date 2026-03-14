@@ -73,15 +73,15 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "text_block": {
+        "about_block": {
           "type": "text",
           "settings": {
             "title": "About Nosura",
-            "content": "<p>Your one-stop shop for quality products at great prices. We curate the best everyday items and deliver them straight to your door.</p>",
+            "content": "<p>Your one-stop shop for quality products at great prices. From everyday essentials to unique finds, we deliver straight to your door.</p><p><a href=\"/pages/about\">Learn more about us \u2192</a></p>",
             "enable_follow_on_shop": false
           }
         },
-        "links_1": {
+        "links_shop": {
           "type": "links",
           "settings": {
             "menu": "policies",
@@ -89,7 +89,7 @@
             "menu_title": ""
           }
         },
-        "links_2": {
+        "links_service": {
           "type": "links",
           "settings": {
             "menu": "info",
@@ -97,20 +97,20 @@
             "menu_title": ""
           }
         },
-        "text_AkhQzj": {
+        "contact_block": {
           "type": "text",
           "settings": {
-            "title": "About our store",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
-            "enable_follow_on_shop": true
+            "title": "Get in Touch",
+            "content": "<p>60 Cumberland St<br>Springfield, MA 01107</p><p>info@nosura.com<br>+1 (413) 288-4149</p><p>Mon \u2013 Fri, 9 AM \u2013 5 PM EST</p>",
+            "enable_follow_on_shop": false
           }
         }
       },
       "block_order": [
-        "text_block",
-        "links_1",
-        "links_2",
-        "text_AkhQzj"
+        "about_block",
+        "links_shop",
+        "links_service",
+        "contact_block"
       ],
       "settings": {
         "color_scheme": "scheme-1",
