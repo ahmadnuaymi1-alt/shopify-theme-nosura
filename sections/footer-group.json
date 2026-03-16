@@ -65,7 +65,7 @@
         "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "stack_on_mobile": false,
-        "icon_color": "",
+        "icon_color": "#171717",
         "text_color": "",
         "text_alignment": "center"
       }
@@ -77,7 +77,7 @@
           "type": "text",
           "settings": {
             "title": "About",
-            "content": "<p><strong>Store Name: </strong>Nosura<strong><br/>Address: </strong><a href=\"https://www.google.com/search?q=60%20Cumberland%20St%2C%20Springfield%2C%20Massachusetts%2C%2001107%2C%20United%20States\" target=\"_blank\" title=\"60 Cumberland St, Springfield, Massachusetts, 01107, United States\">60 Cumberland St, Springfield, Massachusetts, 01107, United States</a><strong><br/>Email: </strong><a href=\"mailto:info@nosura.com\" title=\"info@nosura.com\">info@nosura.com</a><strong><br/>Number: </strong><a href=\"tel:+14132884149\" title=\"+1 (413) 288-4149\">+1 (413) 288-4149</a><strong><br/>Hours of Operation:</strong> Monday to Friday, 9:00 AM to 5:00 PM (EST)<br/><br/>We try our best to get back to inquiries within 1 to 2 business days.<br/><br/></p>",
+            "content": "<p><strong>Store Name: </strong>Nosura<strong><br/>Address: </strong><a href=\"https://www.google.com/search?q=60%20Cumberland%20St%2C%20Springfield%2C%20Massachusetts%2C%2001107%2C%20United%20States\" target=\"_blank\" title=\"60 Cumberland St, Springfield, Massachusetts, 01107, United States\">60 Cumberland St, Springfield, Massachusetts, 01107, United States</a><strong><br/>Email: </strong><a href=\"mailto:info@nosura.com\" title=\"info@nosura.com\">info@nosura.com</a><strong><br/>Number: </strong><a href=\"tel:+14132884149\" title=\"+1 (413) 288-4149\">+1 (413) 288-4149</a><strong><br/>Hours of Operation:</strong> Monday to Friday, 9:00 AM to 5:00 PM (EST)<br/>We try our best to get back to inquiries within 1 to 2 business days.<br/><br/></p>",
             "enable_follow_on_shop": false
           }
         },
