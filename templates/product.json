@@ -120,7 +120,7 @@
         "separate_section_with_border": false,
         "image": "{{ product.metafields.custom.image_for_image_text_section_1.value }}",
         "reveal_on_scroll": true,
-        "image_position": "start",
+        "image_position": "end",
         "content_width": "sm",
         "remove_vertical_spacing": false
       }
