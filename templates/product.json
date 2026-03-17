@@ -108,13 +108,15 @@
           "type": "heading",
           "settings": {
             "text": "{{ product.metafields.custom.image_with_text_header.value }}",
-            "heading_tag": "h2"
+            "heading_tag": "h2",
+            "font_size": 46
           }
         },
         "iwt-richtext": {
           "type": "richtext",
           "settings": {
-            "content": "<p>{{ product.metafields.custom.image_with_text_body | metafield_tag }}</p>"
+            "content": "<p>{{ product.metafields.custom.image_with_text_body | metafield_tag }}</p>",
+            "font_size": 20
           }
         }
       },
