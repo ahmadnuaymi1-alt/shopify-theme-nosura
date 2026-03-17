@@ -5,6 +5,9 @@
     }
     #shopify-section-{{ section.id }} .image-with-text {
       --image-with-text-gap: {{ section.settings.image_text_gap }}px;
+      {%- if section.settings.image_shadow != 'none' -%}
+        overflow: visible;
+      {%- endif -%}
     }
     #shopify-section-{{ section.id }} .image-with-text > :is(svg, img) {
       max-height: {{ section.settings.image_max_height }}px;
