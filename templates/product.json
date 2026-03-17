@@ -68,7 +68,7 @@
         "product_info_size": 46,
         "show_sticky_add_to_cart": true,
         "center_basic_info": false,
-        "desktop_media_layout": "grid_2x_highlighted",
+        "desktop_media_layout": "carousel_thumbnails_bottom",
         "desktop_media_grid_gap": 30,
         "mobile_controls": "thumbnails",
         "enable_media_autoplay": false,
@@ -116,7 +116,7 @@
         "iwt-richtext"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "image": "{{ product.metafields.custom.image_for_image_text_section_1.value }}",
         "reveal_on_scroll": true,
@@ -189,7 +189,7 @@
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "heading": "Why choose us",
-        "image_aspect_ratio": "portrait",
+        "image_aspect_ratio": "square",
         "image_border_radius": 0,
         "icon_size": 32,
         "mobile_hide_text": true
@@ -250,7 +250,7 @@
         "question_dbXDxq"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "subheading": "Got questions?",
         "title": "Frequently Asked Questions",
