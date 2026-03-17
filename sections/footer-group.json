@@ -21,7 +21,7 @@
             "icon_width": 24,
             "mobile_icon_width": 24,
             "title": "Free Shipping",
-            "content": "<p>On orders over $50</p>"
+            "content": "<p>Enjoy free standard standard delivery on all orders.</p>"
           }
         },
         "icon-2": {
@@ -31,7 +31,7 @@
             "icon_width": 24,
             "mobile_icon_width": 24,
             "title": "Easy Returns",
-            "content": "<p>30-day return policy</p>"
+            "content": "<p>Changed your mind? We have a 30 day return policy.</p>"
           }
         },
         "icon-3": {
@@ -40,8 +40,8 @@
             "icon": "picto-customer-support",
             "icon_width": 24,
             "mobile_icon_width": 24,
-            "title": "Customer Support",
-            "content": "<p>Available 24/7</p>"
+            "title": "Dedicated Customer Support",
+            "content": "<p>Support available from Monday to Friday, 9AM to 5PM (EST)</p>"
           }
         },
         "icon-4": {
@@ -50,8 +50,8 @@
             "icon": "picto-lock",
             "icon_width": 24,
             "mobile_icon_width": 24,
-            "title": "Secure Checkout",
-            "content": "<p>SSL encrypted payments</p>"
+            "title": "Secure Payments",
+            "content": "<p>Checkout safely with trusted, encrypted payment methods.</p>"
           }
         }
       },
