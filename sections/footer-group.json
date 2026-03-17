@@ -63,7 +63,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "stack_on_mobile": false,
         "icon_color": "#171717",
         "text_color": "",
@@ -113,7 +113,7 @@
         "about_block"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-bbe72ad4-cc11-420e-abbb-914ba67194a0",
         "separate_section_with_border": false,
         "show_social_media": true,
         "show_payment_icons": true,

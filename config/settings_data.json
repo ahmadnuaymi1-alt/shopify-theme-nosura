@@ -13,7 +13,7 @@
     "section_vertical_spacing": "md",
     "button_border_radius": 0,
     "input_border_radius": 0,
-    "default_color_scheme": "scheme-1",
+    "default_color_scheme": "scheme-2",
     "modal_color_scheme": "scheme-2",
     "product_rating_color": "#FBBF24",
     "product_on_sale_accent": "#e32c2b",
@@ -94,6 +94,17 @@
           "text_color": "#ffffff",
           "primary_button_background": "#ffffff",
           "primary_button_text_color": "#171717",
+          "circle_button_background": "#ffffff",
+          "circle_button_icon": "#171717"
+        }
+      },
+      "scheme-bbe72ad4-cc11-420e-abbb-914ba67194a0": {
+        "settings": {
+          "background": "#f7f7f7",
+          "background_gradient": "",
+          "text_color": "#171717",
+          "primary_button_background": "#171717",
+          "primary_button_text_color": "#ffffff",
           "circle_button_background": "#ffffff",
           "circle_button_icon": "#171717"
         }
