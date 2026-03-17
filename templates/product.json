@@ -176,7 +176,9 @@
           "settings": {
             "icon": "picto-shield",
             "title": "{{ product.metafields.custom.feature_1_header.value }}",
-            "text": "{{ product.metafields.custom.feature_1_body.value }}"
+            "title_font_size": 20,
+            "text": "{{ product.metafields.custom.feature_1_body.value }}",
+            "text_font_size": 16
           }
         },
         "feature-2": {
@@ -184,7 +186,9 @@
           "settings": {
             "icon": "picto-delivery-truck",
             "title": "{{ product.metafields.custom.feature_2_header.value }}",
-            "text": "{{ product.metafields.custom.feature_2_body.value }}"
+            "title_font_size": 20,
+            "text": "{{ product.metafields.custom.feature_2_body.value }}",
+            "text_font_size": 16
           }
         },
         "feature-3": {
@@ -192,7 +196,9 @@
           "settings": {
             "icon": "picto-return",
             "title": "{{ product.metafields.custom.feature_3_header.value }}",
-            "text": "{{ product.metafields.custom.feature_3_body.value }}"
+            "title_font_size": 20,
+            "text": "{{ product.metafields.custom.feature_3_body.value }}",
+            "text_font_size": 16
           }
         },
         "feature-4": {
@@ -200,7 +206,9 @@
           "settings": {
             "icon": "picto-customer-support",
             "title": "{{ product.metafields.custom.feature_4_header.value }}",
-            "text": "{{ product.metafields.custom.feature_4_body.value }}"
+            "title_font_size": 20,
+            "text": "{{ product.metafields.custom.feature_4_body.value }}",
+            "text_font_size": 14
           }
         },
         "feature-5": {
@@ -208,7 +216,9 @@
           "settings": {
             "icon": "picto-lock",
             "title": "{{ product.metafields.custom.feature_5_header.value }}",
-            "text": "{{ product.metafields.custom.feature_5_body.value }}"
+            "title_font_size": 20,
+            "text": "{{ product.metafields.custom.feature_5_body.value }}",
+            "text_font_size": 16
           }
         },
         "feature-6": {
@@ -216,7 +226,9 @@
           "settings": {
             "icon": "picto-star",
             "title": "{{ product.metafields.custom.feature_6_header.value }}",
-            "text": "{{ product.metafields.custom.feature_6_body.value }}"
+            "title_font_size": 20,
+            "text": "{{ product.metafields.custom.feature_6_body.value }}",
+            "text_font_size": 16
           }
         }
       },
