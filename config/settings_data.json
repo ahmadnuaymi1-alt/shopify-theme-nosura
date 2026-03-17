@@ -42,6 +42,7 @@
     "show_secondary_image": true,
     "show_vendor": false,
     "product_card_text_font": "heading",
+    "product_color_display": "hide",
     "show_product_rating": true,
     "show_product_rating_if_empty": false,
     "show_quick_buy": true,
