@@ -69,12 +69,12 @@
 
             {%- when 'heading' -%}
               {%- if block.settings.text != blank -%}
-                <p class="{{ block.settings.heading_tag }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+                <p class="{{ block.settings.heading_tag }}" style="font-size: {{ block.settings.font_size }}px;" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
               {%- endif -%}
 
             {%- when 'richtext' -%}
               {%- if block.settings.content != blank -%}
-                <div {{ block.shopify_attributes }}>
+                <div style="font-size: {{ block.settings.font_size }}px;" {{ block.shopify_attributes }}>
                   {{- block.settings.content -}}
                 </div>
               {%- endif -%}
@@ -344,6 +344,16 @@
             { "value": "h6", "label": "H6" }
           ],
           "default": "h2"
+        },
+        {
+          "type": "range",
+          "id": "font_size",
+          "min": 12,
+          "max": 72,
+          "step": 2,
+          "unit": "px",
+          "label": "Font size",
+          "default": 32
         }
       ]
     },
@@ -356,6 +366,16 @@
           "id": "content",
           "label": "t:global.text.content",
           "default": "<p>Use this text to share information about your product.</p>"
+        },
+        {
+          "type": "range",
+          "id": "font_size",
+          "min": 10,
+          "max": 32,
+          "step": 1,
+          "unit": "px",
+          "label": "Font size",
+          "default": 16
         }
       ]
     },
