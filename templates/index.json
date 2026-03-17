@@ -60,8 +60,8 @@
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "products_count": 8,
+            "collection": "chair-covers",
+            "products_count": 4,
             "title": "",
             "link_url": "",
             "link_text": "View all"
@@ -93,7 +93,7 @@
         "wave_side": "0",
         "animation": false,
         "animation_duration": 5,
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "wave_color": "#f2e7ce",
         "margin_top": -192,
         "margin_bottom": 0,
@@ -153,7 +153,7 @@
         "wave_side": "180",
         "animation": false,
         "animation_duration": 5,
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "wave_color": "#f2e7ce",
         "margin_top": -16,
         "margin_bottom": -32,
