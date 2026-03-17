@@ -38,7 +38,7 @@
     #shopify-section-{{ section.id }} .product-features__column {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: {{ section.settings.feature_gap }}px;
     }
 
     #shopify-section-{{ section.id }} .product-features__item {
@@ -296,6 +296,16 @@
       "id": "mobile_hide_text",
       "label": "Hide description text on mobile",
       "default": true
+    },
+    {
+      "type": "range",
+      "id": "feature_gap",
+      "min": 8,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between features",
+      "default": 32
     }
   ],
   "blocks": [

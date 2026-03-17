@@ -3,6 +3,18 @@
     #shopify-section-{{ section.id }} {
       --image-with-text-content-max-width: {% if section.settings.content_width == 'sm' %}430px{% elsif section.settings.content_width == 'md' %}780px{% else %}100%{% endif %};
     }
+    #shopify-section-{{ section.id }} .image-with-text {
+      --image-with-text-gap: {{ section.settings.image_text_gap }}px;
+    }
+    @media screen and (min-width: 700px) {
+      #shopify-section-{{ section.id }} .image-with-text {
+        grid-template-columns: {{ section.settings.image_width }}fr {{ 100 | minus: section.settings.image_width }}fr;
+        align-items: {{ section.settings.text_position }};
+      }
+      #shopify-section-{{ section.id }} .image-with-text--reverse {
+        grid-template-columns: {{ 100 | minus: section.settings.image_width }}fr {{ section.settings.image_width }}fr;
+      }
+    }
   </style>
 
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
@@ -25,7 +37,7 @@
         {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
       {%- endif -%}
 
-      <div class="prose text-center sm:text-start">
+      <div class="prose text-center sm:text-{{ section.settings.text_alignment }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'subheading' -%}
@@ -105,6 +117,17 @@
       ]
     },
     {
+      "type": "range",
+      "id": "image_width",
+      "min": 30,
+      "max": 70,
+      "step": 5,
+      "unit": "%",
+      "label": "Image width (desktop)",
+      "info": "Percentage of section width the image takes. Text fills the rest.",
+      "default": 50
+    },
+    {
       "type": "select",
       "id": "image_position",
       "label": "Image position",
@@ -119,6 +142,38 @@
         }
       ],
       "default": "start"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        { "value": "start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "end", "label": "Right" }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text vertical position",
+      "options": [
+        { "value": "start", "label": "Top" },
+        { "value": "center", "label": "Center" },
+        { "value": "end", "label": "Bottom" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "image_text_gap",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between image and text",
+      "default": 48
     },
     {
       "type": "select",
