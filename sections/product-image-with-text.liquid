@@ -12,6 +12,15 @@
       {%- if section.settings.image != blank -%}
         {%- assign sizes = '(max-width: 699px) 100vw, 50vw' -%}
         {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', reveal-on-scroll: section.settings.reveal_on_scroll -}}
+      {%- elsif section.settings.image_fallback != 'none' and product != blank -%}
+        {%- assign fi = section.settings.image_fallback | plus: 0 -%}
+        {%- assign fallback_img = product.images[fi] -%}
+        {%- if fallback_img != blank -%}
+          {%- assign sizes = '(max-width: 699px) 100vw, 50vw' -%}
+          {{- fallback_img | image_url: width: fallback_img.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', loading: 'lazy' -}}
+        {%- else -%}
+          {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
+        {%- endif -%}
       {%- else -%}
         {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
       {%- endif -%}
@@ -79,6 +88,21 @@
       "id": "reveal_on_scroll",
       "label": "t:global.animation.reveal_image_on_scroll",
       "default": true
+    },
+    {
+      "type": "select",
+      "id": "image_fallback",
+      "label": "Fallback to product image",
+      "info": "If no image is selected above, use this product image instead. Only works on product pages.",
+      "default": "none",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "0", "label": "1st product image" },
+        { "value": "1", "label": "2nd product image" },
+        { "value": "2", "label": "3rd product image" },
+        { "value": "3", "label": "4th product image" },
+        { "value": "4", "label": "5th product image" }
+      ]
     },
     {
       "type": "select",
