@@ -39,7 +39,8 @@ may have important consequence on the section itself.
                 {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading_strategy, fetchpriority: fetch_priority, sizes: '100vw', widths: '800,1200,1800,2400,2800,3200' -}}
               </picture>
             {%- else -%}
-              <img src="{{ 'hero-banner.png' | asset_url }}" alt="{{ block.settings.title | default: shop.name }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" style="width: 100%; height: 100%; object-fit: cover;">
+              {%- capture placeholder_image -%}{% cycle 'placeholder': 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
+              {{- placeholder_image | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
             {%- endif -%}
           {%- else -%}
             {%- liquid
