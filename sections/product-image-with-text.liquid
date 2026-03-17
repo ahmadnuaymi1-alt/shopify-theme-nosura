@@ -12,10 +12,10 @@
     #shopify-section-{{ section.id }} .image-with-text > :is(svg, img) {
       max-height: {{ section.settings.image_max_height }}px;
       object-fit: cover;
-      padding-top: {{ section.settings.image_padding_top }}px;
-      padding-right: {{ section.settings.image_padding_right }}px;
-      padding-bottom: {{ section.settings.image_padding_bottom }}px;
-      padding-left: {{ section.settings.image_padding_left }}px;
+      margin-top: {{ section.settings.image_padding_top }}px;
+      margin-right: {{ section.settings.image_padding_right }}px;
+      margin-bottom: {{ section.settings.image_padding_bottom }}px;
+      margin-left: {{ section.settings.image_padding_left }}px;
       {%- if section.settings.image_shadow != 'none' -%}
         box-shadow: {{ section.settings.image_shadow }};
       {%- endif -%}
