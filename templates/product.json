@@ -51,7 +51,7 @@
             "atc_button_text_color": "",
             "payment_button_background": "",
             "payment_button_text_color": "",
-            "atc_shadow": "0 0 24px 6px rgba(0,0,0,0.16)"
+            "atc_shadow": "0 0 16px 4px rgba(0,0,0,0.12)"
           }
         }
       },
@@ -146,8 +146,8 @@
         "reveal_on_scroll": true,
         "image_fallback": "1",
         "image_max_height": 580,
-        "image_padding_top": 0,
-        "image_padding_right": 40,
+        "image_padding_top": 28,
+        "image_padding_right": 52,
         "image_padding_bottom": 0,
         "image_padding_left": 0,
         "image_shadow": "0 0 8px 2px rgba(0,0,0,0.08)",

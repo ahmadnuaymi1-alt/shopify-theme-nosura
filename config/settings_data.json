@@ -50,7 +50,7 @@
     "discount_mode": "saving",
     "cart_type": "drawer",
     "cart_icon": "shopping_bag",
-    "cart_show_free_shipping_bar": true,
+    "cart_show_free_shipping_bar": false,
     "cart_free_shipping_threshold": "50",
     "content_for_index": [],
     "color_schemes": {
