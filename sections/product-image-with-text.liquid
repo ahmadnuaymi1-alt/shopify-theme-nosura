@@ -6,6 +6,11 @@
     #shopify-section-{{ section.id }} .image-with-text {
       --image-with-text-gap: {{ section.settings.image_text_gap }}px;
     }
+    #shopify-section-{{ section.id }} .image-with-text > :is(svg, img) {
+      max-height: {{ section.settings.image_max_height }}px;
+      object-fit: cover;
+      padding: {{ section.settings.image_padding }}px;
+    }
     @media screen and (min-width: 700px) {
       #shopify-section-{{ section.id }} .image-with-text {
         grid-template-columns: {{ section.settings.image_width }}fr {{ 100 | minus: section.settings.image_width }}fr;
@@ -115,6 +120,28 @@
         { "value": "3", "label": "4th product image" },
         { "value": "4", "label": "5th product image" }
       ]
+    },
+    {
+      "type": "range",
+      "id": "image_max_height",
+      "min": 200,
+      "max": 800,
+      "step": 20,
+      "unit": "px",
+      "label": "Image max height",
+      "info": "Limits how tall the image can be. Set to 800 for no limit.",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "image_padding",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Image padding",
+      "info": "Space between the image and the section edges.",
+      "default": 0
     },
     {
       "type": "range",
