@@ -50,7 +50,8 @@
             "atc_button_background": "",
             "atc_button_text_color": "",
             "payment_button_background": "",
-            "payment_button_text_color": ""
+            "payment_button_text_color": "",
+            "atc_shadow": "0 0 24px 6px rgba(0,0,0,0.16)"
           }
         }
       },
@@ -149,7 +150,7 @@
         "image_padding_right": 40,
         "image_padding_bottom": 0,
         "image_padding_left": 0,
-        "image_shadow": "0 8px 30px rgba(0,0,0,0.20)",
+        "image_shadow": "0 0 16px 4px rgba(0,0,0,0.12)",
         "image_border_radius": 0,
         "image_width": 50,
         "image_position": "end",
