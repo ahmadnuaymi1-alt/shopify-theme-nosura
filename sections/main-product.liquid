@@ -773,6 +773,20 @@ quick buy information in a template, that will be extracted in JS, which ensures
           "type": "color",
           "id": "payment_button_text_color",
           "label": "t:sections.main_product.blocks.buy_buttons.payment_button_text_color"
+        },
+        {
+          "type": "select",
+          "id": "atc_shadow",
+          "label": "Button shadow",
+          "info": "Adds a shadow around the Add to Cart button to make it pop.",
+          "default": "none",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "0 0 8px 2px rgba(0,0,0,0.08)", "label": "Subtle" },
+            { "value": "0 0 16px 4px rgba(0,0,0,0.12)", "label": "Medium" },
+            { "value": "0 0 24px 6px rgba(0,0,0,0.16)", "label": "Strong" },
+            { "value": "0 0 32px 8px rgba(0,0,0,0.22)", "label": "Extra strong" }
+          ]
         }
       ]
     },

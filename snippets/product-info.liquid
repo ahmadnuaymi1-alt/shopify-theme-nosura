@@ -363,6 +363,13 @@ Supported variables
                 payment_button_background: block.settings.payment_button_background,
                 payment_button_text_color: block.settings.payment_button_text_color
             -%}
+            {%- if block.settings.atc_shadow != blank and block.settings.atc_shadow != 'none' -%}
+              <style>
+                #shopify-section-{{ section.id }} .buy-buttons .button {
+                  box-shadow: {{ block.settings.atc_shadow }};
+                }
+              </style>
+            {%- endif -%}
 
           {%- when 'pickup_availability' -%}
             {%- if product != blank -%}
