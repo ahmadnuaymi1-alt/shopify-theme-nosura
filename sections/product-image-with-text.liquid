@@ -5,21 +5,26 @@
     }
     #shopify-section-{{ section.id }} .image-with-text {
       --image-with-text-gap: {{ section.settings.image_text_gap }}px;
-      {%- if section.settings.image_shadow != 'none' -%}
-        overflow: visible;
-      {%- endif -%}
+      overflow: visible;
     }
-    #shopify-section-{{ section.id }} .image-with-text > :is(svg, img) {
+    #shopify-section-{{ section.id }} .product-iwt-image {
+      padding-top: {{ section.settings.image_padding_top }}px;
+      padding-right: {{ section.settings.image_padding_right }}px;
+      padding-bottom: {{ section.settings.image_padding_bottom }}px;
+      padding-left: {{ section.settings.image_padding_left }}px;
+    }
+    #shopify-section-{{ section.id }} .product-iwt-image > :is(svg, img) {
+      width: 100%;
       max-height: {{ section.settings.image_max_height }}px;
       object-fit: cover;
-      margin-top: {{ section.settings.image_padding_top }}px;
-      margin-right: {{ section.settings.image_padding_right }}px;
-      margin-bottom: {{ section.settings.image_padding_bottom }}px;
-      margin-left: {{ section.settings.image_padding_left }}px;
+      display: block;
+      border-radius: {{ section.settings.image_border_radius }}px;
       {%- if section.settings.image_shadow != 'none' -%}
         box-shadow: {{ section.settings.image_shadow }};
       {%- endif -%}
-      border-radius: {{ section.settings.image_border_radius }}px;
+    }
+    #shopify-section-{{ section.id }} .image-with-text--reverse > .product-iwt-image {
+      order: 9999;
     }
     @media screen and (min-width: 700px) {
       #shopify-section-{{ section.id }} .image-with-text {
@@ -36,21 +41,23 @@
 
   <div class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
     <image-with-text class="image-with-text {% if section.settings.image_position == 'end' %}image-with-text--reverse{% endif %}">
-      {%- if section.settings.image != blank -%}
-        {%- assign sizes = '(max-width: 699px) 100vw, 50vw' -%}
-        {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', reveal-on-scroll: section.settings.reveal_on_scroll -}}
-      {%- elsif section.settings.image_fallback != 'none' and product != blank -%}
-        {%- assign fi = section.settings.image_fallback | plus: 0 -%}
-        {%- assign fallback_img = product.images[fi] -%}
-        {%- if fallback_img != blank -%}
+      <div class="product-iwt-image">
+        {%- if section.settings.image != blank -%}
           {%- assign sizes = '(max-width: 699px) 100vw, 50vw' -%}
-          {{- fallback_img | image_url: width: fallback_img.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', loading: 'lazy' -}}
+          {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', reveal-on-scroll: section.settings.reveal_on_scroll -}}
+        {%- elsif section.settings.image_fallback != 'none' and product != blank -%}
+          {%- assign fi = section.settings.image_fallback | plus: 0 -%}
+          {%- assign fallback_img = product.images[fi] -%}
+          {%- if fallback_img != blank -%}
+            {%- assign sizes = '(max-width: 699px) 100vw, 50vw' -%}
+            {{- fallback_img | image_url: width: fallback_img.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', loading: 'lazy' -}}
+          {%- else -%}
+            {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
+          {%- endif -%}
         {%- else -%}
           {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
         {%- endif -%}
-      {%- else -%}
-        {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
-      {%- endif -%}
+      </div>
 
       <div class="prose text-center sm:text-{{ section.settings.text_alignment }}">
         {%- for block in section.blocks -%}
