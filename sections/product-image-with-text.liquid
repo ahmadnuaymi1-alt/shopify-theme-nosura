@@ -9,7 +9,14 @@
     #shopify-section-{{ section.id }} .image-with-text > :is(svg, img) {
       max-height: {{ section.settings.image_max_height }}px;
       object-fit: cover;
-      padding: {{ section.settings.image_padding }}px;
+      padding-top: {{ section.settings.image_padding_top }}px;
+      padding-right: {{ section.settings.image_padding_right }}px;
+      padding-bottom: {{ section.settings.image_padding_bottom }}px;
+      padding-left: {{ section.settings.image_padding_left }}px;
+      {%- if section.settings.image_shadow != 'none' -%}
+        box-shadow: {{ section.settings.image_shadow }};
+      {%- endif -%}
+      border-radius: {{ section.settings.image_border_radius }}px;
     }
     @media screen and (min-width: 700px) {
       #shopify-section-{{ section.id }} .image-with-text {
@@ -133,14 +140,76 @@
       "default": 800
     },
     {
+      "type": "header",
+      "content": "Image padding"
+    },
+    {
       "type": "range",
-      "id": "image_padding",
+      "id": "image_padding_top",
       "min": 0,
       "max": 80,
       "step": 4,
       "unit": "px",
-      "label": "Image padding",
-      "info": "Space between the image and the section edges.",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_padding_right",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding right",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_padding_left",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding left",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Image effects"
+    },
+    {
+      "type": "select",
+      "id": "image_shadow",
+      "label": "Image shadow",
+      "info": "Adds a shadow around the image to make it pop.",
+      "default": "none",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "0 2px 8px rgba(0,0,0,0.10)", "label": "Subtle" },
+        { "value": "0 4px 16px rgba(0,0,0,0.15)", "label": "Medium" },
+        { "value": "0 8px 30px rgba(0,0,0,0.20)", "label": "Strong" },
+        { "value": "0 10px 40px rgba(0,0,0,0.25)", "label": "Extra strong" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "info": "Rounds the corners of the image.",
       "default": 0
     },
     {
