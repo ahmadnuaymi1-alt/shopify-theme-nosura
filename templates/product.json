@@ -120,7 +120,12 @@
         "separate_section_with_border": false,
         "image": "{{ product.metafields.custom.image_for_image_text_section_1.value }}",
         "reveal_on_scroll": true,
+        "image_fallback": "none",
+        "image_width": 50,
         "image_position": "end",
+        "text_alignment": "start",
+        "text_position": "center",
+        "image_text_gap": 48,
         "content_width": "sm",
         "remove_vertical_spacing": false
       }
@@ -189,10 +194,12 @@
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "heading": "Why choose us",
+        "image_fallback": "2",
         "image_aspect_ratio": "square",
         "image_border_radius": 0,
         "icon_size": 32,
-        "mobile_hide_text": true
+        "mobile_hide_text": true,
+        "feature_gap": 72
       }
     },
     "product-faq": {
