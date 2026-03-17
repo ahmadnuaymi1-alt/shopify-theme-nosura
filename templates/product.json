@@ -94,6 +94,29 @@
         "content": ""
       }
     },
+    "ss_wave_2_phfFVf": {
+      "type": "ss-wave-2",
+      "name": "SS - Wave #2",
+      "settings": {
+        "wave_height": 120,
+        "wave_height_mobile": 80,
+        "wave_animation": true,
+        "wave_rotate": false,
+        "wave_color": "#eee3e3",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0
+      }
+    },
     "product-image-text": {
       "type": "product-image-with-text",
       "blocks": {
@@ -121,6 +144,8 @@
         "image": "{{ product.metafields.custom.image_for_image_text_section_1.value }}",
         "reveal_on_scroll": true,
         "image_fallback": "1",
+        "image_max_height": 560,
+        "image_padding": 44,
         "image_width": 50,
         "image_position": "end",
         "text_alignment": "center",
@@ -128,6 +153,28 @@
         "image_text_gap": 48,
         "content_width": "md",
         "remove_vertical_spacing": true
+      }
+    },
+    "ss_waves_chrzUk": {
+      "type": "ss-waves",
+      "name": "SS - Wave",
+      "settings": {
+        "wave_height": 310,
+        "wave_curvature": 360,
+        "wave_style": "less",
+        "wave_side": "180",
+        "animation": false,
+        "animation_duration": 5,
+        "background_color": "#FFFFFF",
+        "wave_color": "#eee3e3",
+        "margin_top": 0,
+        "margin_bottom": -144,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120
       }
     },
     "product-features": {
@@ -268,7 +315,9 @@
   "order": [
     "main",
     "related-products",
+    "ss_wave_2_phfFVf",
     "product-image-text",
+    "ss_waves_chrzUk",
     "product-features",
     "product-faq"
   ]
