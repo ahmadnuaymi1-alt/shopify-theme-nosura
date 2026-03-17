@@ -12,16 +12,17 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "slide-1": {
+        "image_TNwLLe": {
           "type": "image",
           "settings": {
-            "subheading": "Welcome to Nosura",
-            "title": "One store. Everything you need.",
+            "image": "shopify://shop_images/Untitled_design_14_1.png",
+            "subheading": "Welcome to nosura",
+            "title": "Designed for the Way You Live",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 780,
-            "button_1_text": "Shop Now",
-            "button_1_link": "/collections/all",
+            "button_1_text": "",
+            "button_1_link": "",
             "button_1_style": "solid",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
@@ -34,12 +35,12 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.7) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
           }
         }
       },
       "block_order": [
-        "slide-1"
+        "image_TNwLLe"
       ],
       "settings": {
         "allow_transparent_header": true,
@@ -103,27 +104,17 @@
           "settings": {
             "content": "<p>We believe everyone deserves access to great products without the premium price tag. From everyday essentials to unique finds, Nosura is your one-stop destination for quality goods shipped directly to your door.</p>"
           }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "style": "solid",
-            "text": "Learn More",
-            "url": "/pages/about",
-            "background": "",
-            "text_color": ""
-          }
         }
       },
       "block_order": [
         "subheading",
         "heading",
-        "paragraph",
-        "button"
+        "paragraph"
       ],
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
+        "image": "shopify://shop_images/800_7_1.png",
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
