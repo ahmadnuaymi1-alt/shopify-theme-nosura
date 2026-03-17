@@ -141,7 +141,7 @@
         "image_position": "end",
         "text_alignment": "center",
         "text_position": "center",
-        "image_text_gap": 48,
+        "image_text_gap": 92,
         "content_width": "md",
         "remove_vertical_spacing": true
       }
