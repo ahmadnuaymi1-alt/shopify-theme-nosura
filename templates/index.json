@@ -83,6 +83,28 @@
         "subheading": ""
       }
     },
+    "ss_waves_d8zcbk": {
+      "type": "ss-waves",
+      "name": "SS - Wave",
+      "settings": {
+        "wave_height": 280,
+        "wave_curvature": 370,
+        "wave_style": "less",
+        "wave_side": "0",
+        "animation": false,
+        "animation_duration": 5,
+        "background_color": "#FFFFFF",
+        "wave_color": "#f2e7ce",
+        "margin_top": -192,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120
+      }
+    },
     "image-with-text": {
       "type": "image-with-text",
       "blocks": {
@@ -119,6 +141,28 @@
         "image_position": "start",
         "content_width": "sm",
         "remove_vertical_spacing": true
+      }
+    },
+    "ss_waves_UDAhBq": {
+      "type": "ss-waves",
+      "name": "SS - Wave",
+      "settings": {
+        "wave_height": 280,
+        "wave_curvature": 370,
+        "wave_style": "less",
+        "wave_side": "180",
+        "animation": false,
+        "animation_duration": 5,
+        "background_color": "#FFFFFF",
+        "wave_color": "#f2e7ce",
+        "margin_top": -16,
+        "margin_bottom": -32,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120
       }
     },
     "faq": {
@@ -180,7 +224,9 @@
   "order": [
     "slideshow",
     "featured-collections",
+    "ss_waves_d8zcbk",
     "image-with-text",
+    "ss_waves_UDAhBq",
     "faq"
   ]
 }
