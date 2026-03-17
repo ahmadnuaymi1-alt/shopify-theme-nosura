@@ -78,23 +78,6 @@
         "max_image_zoom_level": 3
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "hide_product_information": false,
-        "stack_products": false,
-        "recommendations_count": 10,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "",
-        "title": "You may also like",
-        "content": ""
-      }
-    },
     "ss_wave_2_phfFVf": {
       "type": "ss-wave-2",
       "name": "SS - Wave #2",
@@ -321,15 +304,32 @@
         "title": "Frequently Asked Questions",
         "open_first_row": false
       }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "hide_product_information": false,
+        "stack_products": false,
+        "recommendations_count": 10,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "title": "You may also like",
+        "content": ""
+      }
     }
   },
   "order": [
     "main",
-    "related-products",
     "ss_wave_2_phfFVf",
     "product-image-text",
     "ss_waves_chrzUk",
     "product-features",
-    "product-faq"
+    "product-faq",
+    "related-products"
   ]
 }
