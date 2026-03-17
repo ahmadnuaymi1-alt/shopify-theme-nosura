@@ -153,10 +153,10 @@
                     </div>
                   {%- endif -%}
                   {%- if block.settings.title != blank -%}
-                    <p class="product-features__title">{{ block.settings.title }}</p>
+                    <p class="product-features__title" style="font-size: {{ block.settings.title_font_size }}px;">{{ block.settings.title }}</p>
                   {%- endif -%}
                   {%- if block.settings.text != blank -%}
-                    <p class="product-features__text">{{ block.settings.text }}</p>
+                    <p class="product-features__text" style="font-size: {{ block.settings.text_font_size }}px;">{{ block.settings.text }}</p>
                   {%- endif -%}
                 </div>
               {%- endif -%}
@@ -197,10 +197,10 @@
                     </div>
                   {%- endif -%}
                   {%- if block.settings.title != blank -%}
-                    <p class="product-features__title">{{ block.settings.title }}</p>
+                    <p class="product-features__title" style="font-size: {{ block.settings.title_font_size }}px;">{{ block.settings.title }}</p>
                   {%- endif -%}
                   {%- if block.settings.text != blank -%}
-                    <p class="product-features__text">{{ block.settings.text }}</p>
+                    <p class="product-features__text" style="font-size: {{ block.settings.text_font_size }}px;">{{ block.settings.text }}</p>
                   {%- endif -%}
                 </div>
               {%- endif -%}
@@ -432,9 +432,29 @@
           "default": "Feature"
         },
         {
+          "type": "range",
+          "id": "title_font_size",
+          "min": 10,
+          "max": 36,
+          "step": 1,
+          "unit": "px",
+          "label": "Title font size",
+          "default": 16
+        },
+        {
           "type": "text",
           "id": "text",
           "label": "Description"
+        },
+        {
+          "type": "range",
+          "id": "text_font_size",
+          "min": 10,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Description font size",
+          "default": 14
         }
       ]
     }
