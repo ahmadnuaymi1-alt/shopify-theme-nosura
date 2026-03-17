@@ -120,13 +120,13 @@
         "separate_section_with_border": false,
         "image": "{{ product.metafields.custom.image_for_image_text_section_1.value }}",
         "reveal_on_scroll": true,
-        "image_fallback": "none",
+        "image_fallback": "1",
         "image_width": 50,
         "image_position": "end",
-        "text_alignment": "start",
+        "text_alignment": "center",
         "text_position": "center",
         "image_text_gap": 48,
-        "content_width": "sm",
+        "content_width": "md",
         "remove_vertical_spacing": false
       }
     },
