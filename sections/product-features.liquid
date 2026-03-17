@@ -14,13 +14,22 @@
     #shopify-section-{{ section.id }} .product-features__image {
       max-width: 100%;
       margin: 0 auto;
+      padding-top: {{ section.settings.image_padding_top }}px;
+      padding-right: {{ section.settings.image_padding_right }}px;
+      padding-bottom: {{ section.settings.image_padding_bottom }}px;
+      padding-left: {{ section.settings.image_padding_left }}px;
     }
 
-    #shopify-section-{{ section.id }} .product-features__image img {
+    #shopify-section-{{ section.id }} .product-features__image img,
+    #shopify-section-{{ section.id }} .product-features__image svg {
       width: 100%;
       height: auto;
+      display: block;
       border-radius: {{ section.settings.image_border_radius }}px;
       object-fit: cover;
+      {%- if section.settings.image_shadow != 'none' -%}
+        box-shadow: {{ section.settings.image_shadow }};
+      {%- endif -%}
     }
 
     #shopify-section-{{ section.id }} .product-features__image--portrait img {
@@ -276,6 +285,68 @@
       "unit": "px",
       "label": "Image border radius",
       "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Image padding"
+    },
+    {
+      "type": "range",
+      "id": "image_padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_padding_right",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding right",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_padding_left",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding left",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Image effects"
+    },
+    {
+      "type": "select",
+      "id": "image_shadow",
+      "label": "Image shadow",
+      "info": "Adds a shadow around the image to make it pop.",
+      "default": "none",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "0 0 8px 2px rgba(0,0,0,0.08)", "label": "Subtle" },
+        { "value": "0 0 16px 4px rgba(0,0,0,0.12)", "label": "Medium" },
+        { "value": "0 0 24px 6px rgba(0,0,0,0.16)", "label": "Strong" },
+        { "value": "0 0 32px 8px rgba(0,0,0,0.22)", "label": "Extra strong" }
+      ]
     },
     {
       "type": "header",
