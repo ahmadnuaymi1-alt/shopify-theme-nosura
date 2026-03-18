@@ -109,14 +109,16 @@
           "settings": {
             "text": "{{ product.metafields.custom.image_with_text_header.value }}",
             "heading_tag": "h2",
-            "font_size": 38
+            "font_size": 38,
+            "mobile_font_size": 24
           }
         },
         "iwt-richtext": {
           "type": "richtext",
           "settings": {
             "content": "<p>{{ product.metafields.custom.image_with_text_body | metafield_tag }}</p>",
-            "font_size": 17
+            "font_size": 17,
+            "mobile_font_size": 14
           }
         }
       },
@@ -143,6 +145,9 @@
         "text_position": "center",
         "image_text_gap": 92,
         "content_width": "md",
+        "mobile_center_image": true,
+        "mobile_collapse_text": false,
+        "mobile_text_lines": 4,
         "remove_vertical_spacing": true
       }
     },
@@ -194,7 +199,7 @@
         "feature-3": {
           "type": "feature",
           "settings": {
-            "icon": "picto-target",
+            "icon": "picto-star",
             "title": "{{ product.metafields.custom.feature_3_header.value }}",
             "title_font_size": 20,
             "text": "{{ product.metafields.custom.feature_3_body.value }}",
