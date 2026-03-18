@@ -109,14 +109,14 @@
           "settings": {
             "text": "{{ product.metafields.custom.image_with_text_header.value }}",
             "heading_tag": "h2",
-            "font_size": 42
+            "font_size": 38
           }
         },
         "iwt-richtext": {
           "type": "richtext",
           "settings": {
             "content": "<p>{{ product.metafields.custom.image_with_text_body | metafield_tag }}</p>",
-            "font_size": 19
+            "font_size": 17
           }
         }
       },
