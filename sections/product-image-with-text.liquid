@@ -26,7 +26,59 @@
     #shopify-section-{{ section.id }} .image-with-text--reverse > .product-iwt-image {
       order: 9999;
     }
+    @media screen and (max-width: 699px) {
+      #shopify-section-{{ section.id }} .image-with-text--reverse > .product-iwt-image {
+        order: -1;
+      }
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'heading' -%}
+          #shopify-section-{{ section.id }} .product-iwt-block-{{ block.id }} {
+            font-size: {{ block.settings.mobile_font_size }}px !important;
+          }
+        {%- endif -%}
+        {%- if block.type == 'richtext' -%}
+          #shopify-section-{{ section.id }} .product-iwt-block-{{ block.id }} {
+            font-size: {{ block.settings.mobile_font_size }}px !important;
+          }
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if section.settings.mobile_center_image -%}
+        #shopify-section-{{ section.id }} .product-iwt-image {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      {%- endif -%}
+      {%- if section.settings.mobile_collapse_text -%}
+        #shopify-section-{{ section.id }} .product-iwt-richtext {
+          display: -webkit-box;
+          -webkit-line-clamp: {{ section.settings.mobile_text_lines }};
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        #shopify-section-{{ section.id }} .product-iwt-richtext.is-expanded {
+          display: block;
+          -webkit-line-clamp: unset;
+          overflow: visible;
+        }
+        #shopify-section-{{ section.id }} .product-iwt-read-more {
+          display: inline-block;
+          margin-top: 0.5rem;
+          font-size: 0.875rem;
+          font-weight: 600;
+          cursor: pointer;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+      {%- else -%}
+        #shopify-section-{{ section.id }} .product-iwt-read-more {
+          display: none;
+        }
+      {%- endif -%}
+    }
     @media screen and (min-width: 700px) {
+      #shopify-section-{{ section.id }} .product-iwt-read-more {
+        display: none;
+      }
       #shopify-section-{{ section.id }} .image-with-text {
         grid-template-columns: {{ section.settings.image_width }}fr {{ 100 | minus: section.settings.image_width }}fr;
         align-items: {{ section.settings.text_position }};
@@ -69,14 +121,15 @@
 
             {%- when 'heading' -%}
               {%- if block.settings.text != blank -%}
-                <p class="{{ block.settings.heading_tag }}" style="font-size: {{ block.settings.font_size }}px;" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+                <p class="{{ block.settings.heading_tag }} product-iwt-block-{{ block.id }}" style="font-size: {{ block.settings.font_size }}px;" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
               {%- endif -%}
 
             {%- when 'richtext' -%}
               {%- if block.settings.content != blank -%}
-                <div style="font-size: {{ block.settings.font_size }}px;" {{ block.shopify_attributes }}>
+                <div class="product-iwt-richtext product-iwt-block-{{ block.id }}" style="font-size: {{ block.settings.font_size }}px;" {{ block.shopify_attributes }}>
                   {{- block.settings.content -}}
                 </div>
+                <button type="button" class="product-iwt-read-more" onclick="this.previousElementSibling.classList.toggle('is-expanded');this.textContent=this.previousElementSibling.classList.contains('is-expanded')?'Read less':'Read more'">Read more</button>
               {%- endif -%}
 
             {%- when 'button' -%}
@@ -302,6 +355,34 @@
       "default": "sm"
     },
     {
+      "type": "header",
+      "content": "Mobile settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_center_image",
+      "label": "Center image on mobile",
+      "info": "Removes left/right padding on mobile so the image is evenly centered.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_collapse_text",
+      "label": "Collapse text on mobile",
+      "info": "Shows a 'Read more' button on mobile when text is long.",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "mobile_text_lines",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "label": "Visible lines before collapse",
+      "info": "Number of text lines shown before 'Read more' on mobile.",
+      "default": 4
+    },
+    {
       "type": "checkbox",
       "id": "remove_vertical_spacing",
       "label": "t:global.spacing.remove_vertical_spacing",
@@ -354,6 +435,16 @@
           "unit": "px",
           "label": "Font size",
           "default": 32
+        },
+        {
+          "type": "range",
+          "id": "mobile_font_size",
+          "min": 12,
+          "max": 72,
+          "step": 2,
+          "unit": "px",
+          "label": "Mobile font size",
+          "default": 24
         }
       ]
     },
@@ -376,6 +467,16 @@
           "unit": "px",
           "label": "Font size",
           "default": 16
+        },
+        {
+          "type": "range",
+          "id": "mobile_font_size",
+          "min": 10,
+          "max": 32,
+          "step": 1,
+          "unit": "px",
+          "label": "Mobile font size",
+          "default": 14
         }
       ]
     },
