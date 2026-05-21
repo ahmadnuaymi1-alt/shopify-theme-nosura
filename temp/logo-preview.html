@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nosura Logo Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #f5f5f5; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; font-family: sans-serif; }
+  .preview-card { background: white; border-radius: 12px; padding: 40px 60px; margin: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); text-align: center; }
+  .preview-card h3 { margin: 0 0 20px; color: #888; font-size: 14px; font-weight: 400; }
+  .logo { font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: -0.5px; display: inline-block; }
+  .logo .text { color: #2D3436; }
+  .logo .dot { color: #F8A4B8; }
+  .size-label { color: #aaa; font-size: 12px; margin-top: 10px; }
+  .bg-dark { background: #2D3436; }
+  .bg-dark .logo .text { color: #FFFFFF; }
+  .instructions { max-width: 500px; color: #666; font-size: 14px; line-height: 1.6; margin-top: 30px; }
+</style>
+</head>
+<body>
+
+<h2 style="color:#333;">Nosura Logo Options</h2>
+
+<div class="preview-card">
+  <h3>Light background (for header)</h3>
+  <div class="logo" style="font-size: 52px;">
+    <span class="text">nosura</span><span class="dot">.</span>
+  </div>
+  <div class="size-label">~280 x 80px at this size</div>
+</div>
+
+<div class="preview-card bg-dark">
+  <h3 style="color:#999;">Dark background version</h3>
+  <div class="logo" style="font-size: 52px;">
+    <span class="text">nosura</span><span class="dot">.</span>
+  </div>
+</div>
+
+<div class="preview-card">
+  <h3>Smaller (mobile)</h3>
+  <div class="logo" style="font-size: 32px;">
+    <span class="text">nosura</span><span class="dot">.</span>
+  </div>
+  <div class="size-label">~160 x 48px</div>
+</div>
+
+<div class="instructions">
+  <strong>How to use:</strong> Right-click the logo above → "Inspect" → screenshot the element,
+  or use a screenshot tool to capture just the logo. Upload to Shopify via
+  <em>Content → Files</em>, then select it in the Header's Logo image picker.
+</div>
+
+</body>
+</html>
